@@ -1,6 +1,6 @@
-# React + Tailwind CSS Hello World
+# GCP K8s React Application
 
-A simple Hello World application built with React and Tailwind CSS.
+A modern React application with Tailwind CSS, designed for deployment on Google Kubernetes Engine (GKE).
 
 ## Prerequisites
 
@@ -29,20 +29,31 @@ npm run dev
 - `postcss.config.js` - PostCSS configuration
 - `vite.config.ts` - Vite configuration
 - `tsconfig.json` - TypeScript configuration
+- `Dockerfile` - Production Docker configuration
+- `Dockerfile.dev` - Development Docker configuration
+- `docker-compose.yml` - Docker Compose configuration
 
 ## Features
 
 - React 18 with TypeScript
 - Tailwind CSS for styling
 - Vite for fast development
+- Docker containerization
+- Kubernetes deployment ready
 - Modern and clean design
 
-## Building for Production
+## Docker Development
 
-To create a production build:
-
+To run the development environment:
 ```bash
-npm run build
+docker compose up dev
 ```
 
-The built files will be in the `dist` directory. 
+## Production Build
+
+To create a production build:
+```bash
+docker compose up prod
+```
+
+The built files will be served through Nginx on port 80. 
